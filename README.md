@@ -2,8 +2,6 @@
 
 https://padyarparth005-cloud.github.io/live-BGMI-Wesite/
 
-.
-.
 
 HERE ARE SOME WEBSITE I CREATED IN FIRST YEAR
 
