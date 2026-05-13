@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BGIS Registration</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+    }
+
+    header{
+      background:#111827;
+      padding:20px;
+      text-align:center;
+    }
+
+    header h1{
+      color:#facc15;
+      font-size:35px;
+    }
+
+    .container{
+      width:90%;
+      max-width:900px;
+      margin:40px auto;
+      background:#1e293b;
+      padding:30px;
+      border-radius:15px;
+    }
+
+    h2{
+      color:#facc15;
+      margin-bottom:20px;
+      text-align:center;
+    }
+
+    .player-box{
+      background:#111827;
+      padding:20px;
+      border-radius:12px;
+      margin-bottom:20px;
+    }
+
+    .player-box h3{
+      color:#facc15;
+      margin-bottom:15px;
+    }
+
+    .form-group{
+      margin-bottom:15px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:bold;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      font-size:15px;
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      background:#facc15;
+      color:black;
+      border:none;
+      border-radius:10px;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#eab308;
+    }
+
+    footer{
+      background:#111827;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>BGIS Tournament Registration</h1>
+</header>
+
+<div class="container">
+
+  <h2>Register Your Team</h2>
+
+  <form id="bgisForm" action="register.php" method="POST">
+
+    <!-- TEAM NAME -->
+
+    <div class="form-group">
+      <label>Team Name</label>
+      <input type="text" name="team_name" required>
+    </div>
+
+    <!-- PLAYER 1 -->
+
+    <div class="player-box">
+
+      <h3>Player 1</h3>
+
+      <div class="form-group">
+        <label>In-Game Name</label>
+        <input type="text" name="player1_name" required>
+      </div>
+
+      <div class="form-group">
+        <label>BGMI ID</label>
+        <input type="text" name="player1_id" required>
+      </div>
+
+    </div>
+
+    <!-- PLAYER 2 -->
+
+    <div class="player-box">
+
+      <h3>Player 2</h3>
+
+      <div class="form-group">
+        <label>In-Game Name</label>
+        <input type="text" name="player2_name" required>
+      </div>
+
+      <div class="form-group">
+        <label>BGMI ID</label>
+        <input type="text" name="player2_id" required>
+      </div>
+
+    </div>
+
+    <!-- PLAYER 3 -->
+
+    <div class="player-box">
+
+      <h3>Player 3</h3>
+
+      <div class="form-group">
+        <label>In-Game Name</label>
+        <input type="text" name="player3_name" required>
+      </div>
+
+      <div class="form-group">
+        <label>BGMI ID</label>
+        <input type="text" name="player3_id" required>
+      </div>
+
+    </div>
+
+    <!-- PLAYER 4 -->
+
+    <div class="player-box">
+
+      <h3>Player 4</h3>
+
+      <div class="form-group">
+        <label>In-Game Name</label>
+        <input type="text" name="player4_name" required>
+      </div>
+
+      <div class="form-group">
+        <label>BGMI ID</label>
+        <input type="text" name="player4_id" required>
+      </div>
+
+    </div>
+
+    <!-- PLAYER 5 -->
+
+    <div class="player-box">
+
+      <h3>Player 5</h3>
+
+      <div class="form-group">
+        <label>In-Game Name</label>
+        <input type="text" name="player5_name" required>
+      </div>
+
+      <div class="form-group">
+        <label>BGMI ID</label>
+        <input type="text" name="player5_id" required>
+      </div>
+
+    </div>
+
+    <button type="submit">
+      Submit Registration
+    </button>
+
+  </form>
+
+</div>
+
+<footer>
+  © 2026 BGMI Esports Tournament
+</footer>
+
+<script>
+
+document.getElementById("bgisForm").addEventListener("submit", function(e){
+
+  let inputs = document.querySelectorAll("input");
+
+  for(let i=0; i<inputs.length; i++){
+
+    if(inputs[i].value.trim() === ""){
+
+      alert("Please fill all fields");
+      e.preventDefault();
+      return;
+
+    }
+
+  }
+
+  alert("Registration Confirmed!");
+
+});
+
+</script>
+
+</body>
+</html>
